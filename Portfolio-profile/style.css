@@ -1,3 +1,7 @@
+/* =====================================================
+   GLOBAL RESET & BASE STYLES
+===================================================== */
+
 *{
     padding: 0;
     margin: 0;
@@ -11,6 +15,9 @@ body{
     line-height: 1.6;
 }
 
+/* =====================================================
+   LAYOUT
+===================================================== */
 .main-container{
     display: grid;
     max-width: 1200px;
@@ -38,7 +45,10 @@ body{
 }
 
 
-/* Profile section */
+
+/* =====================================================
+   PROFILE
+===================================================== */
 
 .profile{
     text-align: center;
@@ -73,7 +83,9 @@ body{
 
 
 
-/* contact information */
+/* =====================================================
+   CONTACT & SOCIAL
+===================================================== */
 
 .contact{
     margin-top: 30px;
@@ -96,13 +108,19 @@ body{
     margin-bottom: 15px;
 }
 
-/* social media */
+/* =====================================================
+    SOCIAL  & MEDIA
+===================================================== */
 
 .social{
     margin-top: 30px;
     border-top: 2px solid #3a3a3a;
     padding-top:20px;
     text-align: center;
+}
+
+.social a{
+    text-decoration: none;
 }
 
 .social img{
@@ -118,9 +136,13 @@ body{
 }
 
 
-/* main content */
+/* =====================================================
+   MAIN CONTAINT
+===================================================== */
 
-/* Navigation ko  */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 
 #navigation{
@@ -146,69 +168,122 @@ nav a{
     color: #FFBF00;
 }
 
+/* =====================================================
+   COMMON SECTION STYLES  &   ABOUT ME SECTION
+===================================================== */
 
-/* about me */
-
-.heading{
+.heading {
+    text-align: center;
     color: #e0e0e0;
     font-size: 2rem;
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 
-.line{
-    width: 60px;
+.line {
+    margin: 0 auto;
+    align-items: center;
+    width: 110px;
     height: 5px;
     background-color: #FFBF00;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 
-.content{
-    text-align: justify;
+.content {
+    text-align: center;
     color: #a0a0a0;
 }
 
-#about{
+#about {
     margin-bottom: 40px;
 }
 
 
-/* skills section */
 
-.grid-container{
+/* =====================================================
+   SKILLS
+===================================================== */
+ .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(120px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 30px;
 }
 
-.item{
+.item {
     padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
     border: 2px solid #3a3a3a;
     background-color: #1e1e1e;
     text-align: center;
-    margin-top: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.item img{
-    height: 48px;
+.item img {
     width: 48px;
-    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+    height: 48px;
     margin-bottom: 15px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg);
 }
 
-.item h3{
-    font-size: 1rem;
-    font-weight: 500;
+.item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+} 
+.box-container {
+    margin-top: 30px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.item:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+.box {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.box-title {
+    text-align: center;
+    color: #FFBF00;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 38px;
+    height: 38px;
+}
+
+.item h4 {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #fff;
 }
 
 
-/* Education */
+
+.edu-heading{
+    text-align: center;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+/* =====================================================
+   EDUCATION SECTION – VERTICAL TIMELINE WITH LOGOS
+===================================================== */
+
+
 #education{
     margin-top: 30px;
 }
@@ -266,9 +341,12 @@ nav a{
     left: 5px;
     border: 2px solid #3a3a3a;
 }
-
-
-/* Portfolio */
+/* =====================================================
+   PORTFOLIO SECTION
+===================================================== */
+#portfolio{
+    margin-top: 30px;
+}
 
 .project-container{
     margin-top: 30px;
@@ -350,46 +428,155 @@ nav a{
     }
 }
 
-/* Certification Clean Style */
+/* =====================================================
+   CERTIFICATION SECTION
+===================================================== */
 
 #Certification{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .cert-list{
     margin-top: 20px;
 }
 
-.cert-item{
-    display: flex;
+.cert-container{
+    display: grid;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.cert-card{
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    gap: 20px;
     align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
-.cert-item img{
-    height: 20px;
-    width: 20px;
-    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg);
+.cert-card:hover{
+    border-color: #FFBF00;
+    background-color: #252525;
 }
 
-.cert-title{
+.cert-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #3a3a3a;
+    height: 100px;
+}
+
+.institution-logo{
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.cert-info h3{
     color: #e0e0e0;
-    text-decoration: underline;
-}
-.active, .cert-title:hover{
-    color: #FFBF00;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
 }
 
-
-.cert-org{
+.inst-name{
     color: #FFBF00;
     font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-/* Modal */
+.cert-desc{
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.cert-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-link{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cert-thumbnail{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    border: 2px solid #FFBF00;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.cert-link:hover .cert-thumbnail{
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 191, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px){
+    .cert-card{
+        grid-template-columns: 80px 1fr 120px;
+        gap: 15px;
+    }
+    
+    .cert-logo{
+        padding: 12px;
+        height: 80px;
+    }
+    
+    .institution-logo{
+        height: 60px;
+    }
+    
+    .cert-thumbnail{
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px){
+    .cert-card{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .cert-logo{
+        padding: 15px;
+        height: 90px;
+    }
+    
+    .institution-logo{
+        height: 65px;
+    }
+    
+    .cert-thumbnail{
+        height: 130px;
+        width: 130px;
+    }
+}
+
+
+
+/* =====================================================
+   MODEL  SECTION
+===================================================== */
 
 .cert-modal{
     display: none;
